@@ -2,11 +2,12 @@ import './UserList.css'
 
 
 function UserList({users, deleteUser}) {
-  // console.log(users)
+  console.log(users) 
   return (
     <div className='userList'>
       <div className="userList-container container ">
         {users.map((user)=>{
+          console.log(user)
           return (
             <div className='card' key={user.id}>
               <div className="card-inner">

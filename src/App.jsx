@@ -22,11 +22,11 @@ const closeMod = (e)=>{
   if (e.key==='Escape') setMod(false)
 }
 
-const addNewuser = (users)=>{
-  setUsers((init)=>{
-    return {...init, users}
+const addNewuser = (user)=>{
+  setUsers((prev)=>{
+    return [...prev, user]
   })
-  useState(false)
+  setMod(false)
 }
   return (
     <div onClick={closeMod} onKeyDown={closeMod} className='App'>

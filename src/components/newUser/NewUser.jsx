@@ -10,13 +10,13 @@ function NewUser({addNewuser}) {
         image: '',
         firstName: '',
         lastName: '',
-        age: null,
+        age: '',
         from: '',
         job: '',
         gender: ''
     })
 
-        // console.log(user)
+        console.log(user)
         const triggerSubmit = (e)=>{
             e.preventDefault()
             addNewuser(user)
@@ -29,7 +29,7 @@ function NewUser({addNewuser}) {
                 <h2>create user</h2>
                 <form onSubmit={triggerSubmit}>
                     <label>
-                        <span>Imae URL:</span>
+                        <span>Image URL:</span>
                         <input onChange={(e)=>{setUser((init)=>{
                             return {...init, image: e.target.value}
                         })}} type="url" required />
@@ -47,7 +47,7 @@ function NewUser({addNewuser}) {
                         })}} type="text" required />
                     </label>
                     <label>
-                        <span>Age: </span>
+                        <span>Age:</span>
                         <input onChange={(e)=>{setUser((init)=>{
                             return {...init, age: e.target.value}
                         })}} type="number" required />
